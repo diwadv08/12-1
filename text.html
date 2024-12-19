@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        background:silver;
+        padding:4px 20px;
+        color:black;
+        border:none;
+        border-radius:10px;
+    }
+    .active{
+        background:blue;
+        color:white;
+    }
+</style>
+<body>
+    <!-- <button onclick="this.setAttribute('class','active')">Click -1</button>
+    <button onclick="this.setAttribute('class','active')">Click -2</button>
+    <button onclick="this.setAttribute('class','active')">Click -3</button> -->
+    <button onclick="myFun(this)" class="active">Click -1</button>
+    <button onclick="myFun(this)">Click -2</button>
+    <button onclick="myFun(this)">Click -3</button>
+</body>
+</html>
+
+<script>
+    function myFun(e){
+        const prev=document.querySelector('.active');
+        
+        if(prev!=null){
+            prev.className='';            
+        }
+        e.className='active';
+         
+    }
+</script>
