@@ -4,17 +4,17 @@
     // }).then((j)=>{
     //     console.log(j);
     // })
-    let div=document.querySelector("div");
+    // let div=document.querySelector("div");
     
-    async function MyFun(){
-        let res=await fetch('https://jsonplaceholder.typicode.com/users');
-        let datas=await res.json();   
-        datas.map((e)=>{
-            div.innerHTML+="<br>"+e.name;
-        })
+    // async function MyFun(){
+    //     let res=await fetch('https://jsonplaceholder.typicode.com/users');
+    //     let datas=await res.json();   
+    //     datas.map((e)=>{
+    //         div.innerHTML+="<br>"+e.name;
+    //     })
              
-    }
-    MyFun()
+    // }
+    // MyFun()
 
 
     // let a=[2,3,4];
@@ -36,4 +36,11 @@
     // }
 
     
-   
+// fetch('https://jsonplaceholder.typicode.com/albums')
+// .then((kk)=>{
+//     return kk.json()
+// })
+// .then((data)=>{
+//    console.log(data);   
+// })
+
