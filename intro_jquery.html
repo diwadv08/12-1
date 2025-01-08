@@ -7,7 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <button class="click">Click</button>
+    <h1>Hello World</h1>
+    <!-- <select name="" id="">
+        <option value="Option-1">Option-1</option>
+        <option value="Option-2">Option-2</option>
+        <option value="Option-3">Option-3</option>
+        <option value="Option-4">Option-4</option>
+        <option value="Option-5">Option-5</option>
+    </select>
+    <input type="text"> -->
+    <!-- <button>Clic</button>
+    <h2>Hello</h2>
+    <h2>Hello</h2>
+    <h2 id="hi">Hi</h2>
+    <h2>Hello</h2>
+    <h2>Hello</h2>
+    <h2 id="b1">Erase All h2</h2>
+    <h2 id="b2">Erase Hi h2</h2> -->
+
+    <!-- <button class="click">Click</button>
     <button class="delete-1">Delete-1</button>
     <button class="delete-2">Delete-2</button>
     <button class="delete-3">Delete-3</button>
@@ -15,8 +33,85 @@
     <button class="show">Show</button>
     <button class="hide_show">Hide & Show</button>
     <i class="fa fa-plus"></i>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus deserunt esse ratione libero, quibusdam velit? Amet distinctio explicabo eveniet expedita, modi, aspernatur, exercitationem quis optio porro maiores quo ullam error.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus deserunt esse ratione libero, quibusdam velit? Amet distinctio explicabo eveniet expedita, modi, aspernatur, exercitationem quis optio porro maiores quo ullam error.</p> -->
 </body>
 </html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="jquery.js"></script>
+<script src="jquery/intro.js"></script>
+
+<script>
+    // $(document).ready(function(){
+    //    $("#b1").click(function(){
+    //     $("h2").toggle()
+    //    })
+    //    $("#b2").click(function(){
+    //     $("#hi").toggle()
+    //    })
+    // })
+
+    // $(document).ready(function(){
+    //     let num1=0;
+    //     let num2=0;
+    //     let num3=0;
+    //     $("button").dblclick(function(){
+    //         num1+=1;
+    //         console.log("Dbl Click-"+num1)
+    //     })
+    //     $("button").mousemove(function(){
+    //         num2+=1;
+    //         console.log("Mouse Move-"+num2)
+    //     })
+    //     $("button").hover(function(){
+    //         num3+=1;
+    //         console.log("Hover-"+num3)
+    //     })
+
+    //     $("select").change(function(){
+    //         alert($(this).val())
+    //     })
+
+    //     $("input").keyup(function(){
+    //         alert($(this).val())
+    //     })
+    //     $("input").mouseout(function(){
+    //         alert("Hello")
+    //     })
+    // })
+
+
+    // $(document).ready(function(){
+    //     $("h1").on({
+    //         click:function(){
+    //             console.log('Click')
+    //         },
+    //         dblclick:function(){
+    //             alert('Double Click')
+    //         },
+    //         mousemove:function(){
+    //             console.log('Mouse move')
+    //         }
+    //     })
+    // })
+
+
+    $(document).ready(function(){
+        let fontSize1=2;
+        
+        $("h1").on({
+            click:function(){
+                let styles={
+                    color:"red",
+                    background:"silver",
+                    fontSize:fontSize1+"rem",
+                    border:"1px solid silver"
+                }
+                fontSize1+=1;
+                $(this).css(styles)
+                // console.log('Click')
+            },
+            
+        })
+    })
+
+</script>
+

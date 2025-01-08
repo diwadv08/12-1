@@ -1,0 +1,74 @@
+JSON Object,Array
+{
+  "key1": value1,
+  "key2": value2,
+  "key3": value3
+}
+{
+  "name": "Alice",
+  "age": 25,
+  "isStudent": true,
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "zipcode": "12345"
+  }
+}
+[
+  value1,
+  value2,
+  value3
+]
+[
+  "Apple",
+  "Banana",
+  "Cherry"
+]
+{
+  "name": "Alice",
+  "age": 25,
+  "isStudent": true,
+  "courses": [
+    {
+      "name": "Mathematics",
+      "grade": "A"
+    },
+    {
+      "name": "Physics",
+      "grade": "B+"
+    }
+  ],
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "zipcode": "12345"
+  }
+}
+const data = {
+  "name": "Alice",
+  "age": 25,
+  "isStudent": true,
+  "courses": [
+    {
+      "name": "Mathematics",
+      "grade": "A"
+    },
+    {
+      "name": "Physics",
+      "grade": "B+"
+    }
+  ],
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "zipcode": "12345"
+  }
+};
+
+// Accessing object properties
+console.log(data.name); // Output: Alice
+console.log(data.address.city); // Output: Anytown
+
+// Accessing array elements
+console.log(data.courses[0].name); // Output: Mathematics
+console.log(data.courses[1].grade); // Output: B+
