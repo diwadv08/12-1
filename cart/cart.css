@@ -1,0 +1,14 @@
+.strike{
+    text-decoration:line-through;
+}
+#cart_count{
+    background:#949494;
+    color:white;
+    font-weight:800;
+    font-size:14px;
+    padding:5px 10px;
+    position: relative;
+    top:-25px;
+    border-radius:10px;
+    left:-10px;
+}
