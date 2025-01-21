@@ -149,7 +149,7 @@ let products=[
 let product_cart=document.querySelector(".product_cart");
 let cart_count=document.querySelector(".cart_count");
 let col_3Data='';
-let btnClass='',btnText='',ratingCss;
+let btnClass,btnText,ratingCss;
 products.map((e,i)=>{
 
     if(e.cart_added==0){
