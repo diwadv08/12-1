@@ -1,3 +1,6 @@
+let modal_body=document.querySelector(".modal-body");
+let product_cart=document.querySelector(".product_cart");
+let cart_count=document.querySelector(".cart_count");
 let products=[
     {
         name:"Data-1",
@@ -14,7 +17,7 @@ let products=[
         rating:"4.5",
         old_price:"700",
         new_price:"600",
-        cart_added:0,
+        cart_added:1,
         img:"images/1.jpg"
     },
     {
@@ -146,8 +149,6 @@ let products=[
     
 ];
 
-let product_cart=document.querySelector(".product_cart");
-let cart_count=document.querySelector(".cart_count");
 let col_3Data='';
 let btnClass,btnText,ratingCss;
 products.map((e,i)=>{
@@ -188,11 +189,53 @@ products.map((e,i)=>{
 })
 
 
+
 let cart_items=products.filter((e)=>{
    if(e.cart_added!=0){
     return e;
    }
 })
+let grand_total=0;
+    cart_items.map((e)=>{
+    grand_total+=Number(e.new_price);
+    })
+    console.log(grand_total);
+    
 
+
+        let j='';
+        let s_no=1;
+        cart_items.map((e)=>{
+            j+=`<tr>
+                <td>${s_no++}</td>
+                <td>${e.name}</td>
+                <td><img src="${e.img}" alt="" height="40"></td>
+                <td>Rs.${e.new_price}</td>
+                <td><i class="fa fa-trash"></i></td>
+            </tr>`
+        })    
+
+        let cart_table=`<table class="table">
+                <thead class="bg-dark text-light">
+                    <tr>
+                        <th>S.no</th>
+                        <th>Name</th>
+                        <th>Image</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${j}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5" align="right">
+                            <b>Total Price</b> Rs.${grand_total}
+                        </td>
+                    </tr>
+                </tfoot>
+           </table>`;
+modal_body.innerHTML=cart_table;
 cart_count.innerHTML=cart_items.length;
 product_cart.innerHTML=col_3Data;
